@@ -1,6 +1,14 @@
 // Stores the active TCP connection object.
 let connection;
 
+// Define movement commands mapping
+const movementCommands = {
+  'w': "Move: up",
+  'a': "Move: left",
+  's': "Move: down",
+  'd': "Move: right"
+};
+
 // setup interface to handle user input from stdin
 const setupInput = (conn) => {
   connection = conn;
@@ -18,25 +26,11 @@ const handleUserInput = function (key) {
     process.exit();
   }
 
-  // Move up when 'w' is pressed
-  if (key === 'w') {
-    connection.write("Move: up");
+  // Check if the key is a movement key and send the command if it is
+  if (movementCommands[key]) {
+    connection.write(movementCommands[key]);
   }
-  
-  // Move down when 's' is pressed
-  if (key === 's') {
-    connection.write("Move: down");
-  }
-  
-  // Move left when 'a' is pressed
-  if (key === 'a') {
-    connection.write("Move: left");
-  }
-  
-  // Move right when 'd' is pressed
-  if (key === 'd') {
-    connection.write("Move: right");
-  }
+ 
 };
 
 //exporting
