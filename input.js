@@ -30,6 +30,20 @@ const handleUserInput = function (key) {
   if (movementCommands[key]) {
     connection.write(movementCommands[key]);
   }
+
+  // Special keys for canned messages
+  if (key === '1') {
+    connection.write("Say: Hello!"); 
+  }
+  if (key === '2') {
+    connection.write("Say: Behind you!"); 
+  }
+  if (key === '3') {
+    connection.write("Say: Watch out!"); 
+  }
+  if (key === '4') {
+    connection.write("Say: Nice move!"); 
+  }
  
 };
 
