@@ -8,7 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-![Server Connection Screenshot](./connection-server.png) 
+![Server Connection Screenshot](.) 
 *Console output showing a successful connection to the game server.*
 
 
