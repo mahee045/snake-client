@@ -22,10 +22,8 @@ const connect = function () {
   conn.on('connect', () =>{
     console.log('Successfully connected to game server')
     ///Name of snake
-    conn.write('Name:MAH'); 
-     // Commenting out the hard-coded move message
-    // send move up command to server
-   // conn.write('Move: up');
+    conn.write("Name: MAH"); 
+
    
   })
 
